@@ -3,7 +3,8 @@ adduser brotherscanner --disabled-password --force-badname --gecos ""
 #mkdir -p /scans
 #chmod 777 /scans
 
-chmod -R 777 /home/brotherscanner *
+chmod -R 777 /home/brotherscanner
+
 env > /opt/brother/scanner/env.txt
 su - brotherscanner -c "brsaneconfig4 -a name=$NAME model=$MODEL ip=$IPADDRESS"
 sleep 1000

@@ -1,1 +1,1 @@
-docker build --no-cache -t BrotherScanner .
+docker build --no-cache -t brotherscanner .
