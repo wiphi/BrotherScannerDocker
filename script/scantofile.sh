@@ -61,3 +61,11 @@ if [ ! -e "$OUTPUT" ];then
 fi
 
 echo "$OUTPUT" is created.
+
+OUTPUT_PDF=`basename $OUTPUT .tif`.pdf
+tiff2pdf -o $OUTPUT_PDF $OUTPUT;
+echo "$OUTPUT_PDF" is created.
+
+rm $OUTPUT
+echo "$OUTPUT" deleted.
+
