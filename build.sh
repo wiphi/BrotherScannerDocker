@@ -1,1 +1,1 @@
-docker build --no-cache -t brotherscanner .
+docker build --no-cache -t wiphi/brotherscanner .
