@@ -1,7 +1,10 @@
-adduser brotherscanner --disabled-password --force-badname --gecos ""
+SCRIPT_DIR=/opt/brother/scanner/brscan-skey/script
+SCRIPT_TMP_DIR=/tmp/script
 
-#mkdir -p /scans
-#chmod 777 /scans
+# restore scripts, don't overwrite existing (-n)
+cp -v -n $SCRIPT_TMP_DIR/* $SCRIPT_DIR
+
+adduser brotherscanner --disabled-password --force-badname --gecos ""
 
 chmod -R 777 /home/brotherscanner
 
