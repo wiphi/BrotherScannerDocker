@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  brotherscanner:
+    container_name: brotherscanner
+    environment:
+      - IPADDRESS=192.168.1.123
+      - MODEL=MODEL=MFC-L2700DW
+      - NAME=BrotherScanner
+    image: "wiphi/brotherscanner:latest"
+    network_mode: "host"
+    pid: host
+    restart: unless-stopped
+    volumes:
+      # destination of scanned files
+      - /home/$USER/scans:/home/brotherscanner/brscan
+      # script dir
+      - /home/$USER/brotherscanner_script:/opt/brother/scanner/brscan-skey/script
