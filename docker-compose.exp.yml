@@ -14,4 +14,4 @@ services:
       # destination of scanned files
       - /home/$USER/scans:/home/brotherscanner/brscan
       # script dir
-      - /home/$USER/brotherscanner_script:/opt/brother/scanner/brscan-skey/script
+      - /home/$USER/brotherscanner_script:/opt/brother/scanner/brscan-skey
